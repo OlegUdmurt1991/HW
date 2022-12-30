@@ -1,26 +1,16 @@
-package Lesson16.Enum;
+package Lesson16.first;
+
 
 
 public class Day {
-
-
-    String firstDayOfWeek = DaysOfWeek.MONDAY.getNameDayOfWeek();
-    String secondDayOfWeek = DaysOfWeek.TUESDAY.getNameDayOfWeek();
-    String thirdDayOfWeek = DaysOfWeek.WEDNESDAY.getNameDayOfWeek();
-    String fourthDayOfWeek = DaysOfWeek.THURSDAY.getNameDayOfWeek();
-    String fiveDayOfWeek = DaysOfWeek.FRIDAY.getNameDayOfWeek();
-    String sixthDayOfWeek = DaysOfWeek.SATURDAY.getNameDayOfWeek();
-    String sevenDayOfWeek = DaysOfWeek.SUNDAY.getNameDayOfWeek();
     String[] months = new String[]
             {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
-    String[] dayWeek = new String[]
-            {firstDayOfWeek, secondDayOfWeek, thirdDayOfWeek, fourthDayOfWeek, fiveDayOfWeek, sixthDayOfWeek, sevenDayOfWeek};
+    String[] dayWeek = new String[]{DaysOfWeek.mon, DaysOfWeek.tue, DaysOfWeek.wen, DaysOfWeek.thi, DaysOfWeek.fri, DaysOfWeek.sat, DaysOfWeek.sun};
     int dayNew;
-
     public Day(int numFirstMondayInWeek, int dayOfWeek) {
 
 
-        int dayOfYear = (numFirstMondayInWeek-1) * 7 + 3; // Порядковый номер понедельника в году. Для 2022 года считаем первую неделю с 03.01.2022
+        int dayOfYear = (numFirstMondayInWeek+1) * 7 + 3; // Порядковый номер понедельника в году. Для 2022 года считаем первую неделю с 03.01.2022
 
         for (int k = 0; k <=6; k++) {
             if (dayOfYear <= 31) {
@@ -87,5 +77,4 @@ public class Day {
 
 
     }
-
 }

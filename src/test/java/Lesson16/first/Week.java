@@ -1,13 +1,12 @@
-package Lesson16.Enum;
-
+package Lesson16.first;
 
 
 public class Week {
+    Day day0;
 
-    Day day1;
     Week(int weekNum) {
         int numFirstMondayInWeek = weekNum;
-        day1 = new Day(numFirstMondayInWeek, 0);
+        day0 = new Day(numFirstMondayInWeek, 0);
 
     }
 }
