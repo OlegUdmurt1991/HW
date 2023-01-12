@@ -1,2 +1,5 @@
+git rm -r --cached .idea
+
+
 /target
 /.idea
